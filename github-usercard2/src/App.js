@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import UserCard from './Components/UserCard';
+// import UserCard from './Components/UserCard';
+
 import UserList from './Components/UserList';
-// import UserList from './Components/UserList';
 
 
 
 class App extends React.Component {
-  constructor (props){
-    super(props);
+  constructor (){
+    super();
     this.state = {
       user: {},
       followers: {}
@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Github and friends</h1>
-        <UserCard />
+      <UserList user={this.state.user} />
       </div>
     );
   }
